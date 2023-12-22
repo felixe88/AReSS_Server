@@ -11,7 +11,7 @@ return [
     'cors' => [
         'AllowOrigin' => 'http://localhost:3000',
         'AllowCredentials' => true,
-        'AllowMethods' => 'GET',
+        'allowedMethods' => ['GET', 'POST', 'PUT'],
         'AllowHeaders' => true,
         'ExposeHeaders' => false,
         'MaxAge' => false,

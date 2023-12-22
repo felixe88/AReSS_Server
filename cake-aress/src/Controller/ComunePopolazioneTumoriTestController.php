@@ -173,7 +173,8 @@ class ComunePopolazioneTumoriTestController extends AppController
             // Rispondi con una conferma
             $this->set([
                 'message' => 'Dati ricevuti con successo',
-                '_serialize' => ['message']
+                'data' => $dati, // Aggiungi i dati alla risposta
+                '_serialize' => ['message', 'data'] // Specifica quali chiavi serializzare
             ]);
         } else {
             // Se la richiesta non è di tipo POST, restituisci un errore
